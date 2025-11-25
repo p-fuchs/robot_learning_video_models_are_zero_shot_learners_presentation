@@ -1,0 +1,41 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Reasoning test: plan path red → green without crossing walls.</li>
+			<li>Prompt enforces static top-down, smooth slide, no camera moves.</li>
+			<li>10 attempts per sample; success = reach goal with no illegal moves.</li>
+			<li>Models: Veo 3, Veo 2; comparators Nano Banana, Gemini 2.5 (I2T/T2T).</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Reasoning</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Maze solving</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="bg-gradient-to-br from-sky-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Setup</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Red circle must reach green circle along white path; no wall crossings.</div>
+				<div>Static top-down camera; smooth slide, no zoom/pan.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-emerald-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Evaluation</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Frame-by-frame path extraction; check illegal moves/clipping/goal changes.</div>
+				<div>Success = goal reached cleanly; report pass@10 over attempts.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Data & models</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>50 random grids per size; 40 irregular mazes (hand-drawn, flipped/rotated).</div>
+				<div>Veo 3/2 via Vertex; Nano Banana (image), Gemini 2.5 Pro (I2T/T2T).</div>
+			</div>
+		</div>
+	</div>
+</section>

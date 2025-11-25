@@ -1,0 +1,58 @@
+<section class="flex flex-col items-center gap-6">
+	<aside class="notes">
+		<ul>
+			<li>Zero-shot: segment all objects without specifying categories/locations.</li>
+			<li>Metric: mIoU (best frame pass@10); Veo 3 hits 0.74, Nano Banana 0.73.</li>
+			<li>Green bg prompt helps: Veo 3 0.74 vs 0.66 on white.</li>
+			<li>SAMv2 still stronger, but Veo shows strong zero-shot segmentation.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<h3 class="!text-5xl !leading-tight font-semibold">Video segmentation</h3>
+	</div>
+
+	<div class="w-full mt-7 flex items-center justify-center relative">
+		<video id="segmentation-demo" class="w-full rounded-2xl border border-gray-700 shadow-lg" src="https://video-zero-shot.github.io/mp4/segmentation.mp4" controls muted onloadedmetadata="this.playbackRate=1.75"></video>
+		<div class="fragment fade-up absolute top-4 right-4 bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-black/90 backdrop-blur border border-gray-700 rounded-2xl px-5 py-4 text-gray-200 text-sm shadow-xl pointer-events-none" data-fragment-index="1">
+			<div class="text-[11px] uppercase tracking-[0.16em] text-gray-400 pb-3">mIoU (best frame pass@10)</div>
+			<div class="space-y-3 w-[320px]">
+				<div class="grid grid-cols-[minmax(140px,1fr)_1fr] items-center gap-4">
+					<div class="flex items-center gap-2">
+						<span class="px-3 py-1 rounded-full bg-emerald-900/60 text-emerald-100 text-xs font-semibold border border-emerald-700">Veo 3 · green bg</span>
+					</div>
+					<div class="flex items-center justify-end gap-4">
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">mIoU</div>
+							<div class="text-base font-semibold text-emerald-300">0.74</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-[minmax(140px,1fr)_1fr] items-center gap-4 pt-2 border-t border-gray-800">
+					<div class="flex items-center gap-2">
+						<span class="px-3 py-1 rounded-full bg-emerald-900/40 text-emerald-100 text-xs font-semibold border border-emerald-700/60">Veo 3 · white bg</span>
+					</div>
+					<div class="flex items-center justify-end gap-4">
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">mIoU</div>
+							<div class="text-base font-semibold text-amber-300">0.66</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-[minmax(140px,1fr)_1fr] items-center gap-4 pt-2 border-t border-gray-800">
+					<div class="flex items-center gap-2">
+						<span class="px-3 py-1 rounded-full bg-indigo-900/50 text-indigo-100 text-xs font-semibold border border-indigo-700/60">Nano Banana</span>
+					</div>
+					<div class="flex items-center justify-end gap-4">
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">mIoU</div>
+							<div class="text-base font-semibold text-indigo-200">0.73</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

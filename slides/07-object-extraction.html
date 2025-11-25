@@ -1,0 +1,34 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Prompt models to extract and line up all animals (1–9) on white background.</li>
+			<li>No category/location hints; zero-shot tallying.</li>
+			<li>Dataset: Nano Banana generated 54 images (6 per count, 7 animal types).</li>
+			<li>We count connected components in last frame to check correctness.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Manipulation</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Object extraction</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div class="bg-gradient-to-br from-emerald-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Task</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Given a scene with 1–9 animals, extract and line them up on white space, separated.</div>
+				<div>No categories or locations provided; zero-shot “tally”.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-sky-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Data & prompt</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Nano Banana generated 54 images (6 per count, 7 animal types).</div>
+				<div>Prompt: place the exact number of animals outdoors, non-overlapping.</div>
+				<div>Models: Veo 3 &amp; Veo 2 via Vertex; 10 videos per sample.</div>
+			</div>
+		</div>
+	</div>
+</section>

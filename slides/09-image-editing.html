@@ -1,0 +1,39 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Task: edit images via text (add/remove/modify) on 30 Emu-edit samples.</li>
+			<li>Models: Veo 3 & Veo 2 via Vertex; 2 samples per image, first rated.</li>
+			<li>Human study: fidelity (correct edit) and precision (edit without unintended changes like zoom/motion).</li>
+			<li>Veo 3 strong on texture/detail preservation; bias toward animated scenes can introduce artifacts.</li>
+			<li>Prompt emphasizes static, no zoom/pan/dolly.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Manipulation</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Image editing</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+		<div class="md:col-span-2 bg-gradient-to-br from-emerald-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Example</div>
+			<div class="text-gray-400 text-sm leading-relaxed">Prompt: “Create a smooth, static animation that slowly changes the color of the fire hydrant to red. Do not change anything else. No zoom, no pan, no dolly.”</div>
+			<div class="overflow-hidden rounded-xl border border-gray-800">
+				<img src="image_editing.png" alt="Image editing example with Veo outputs" class="w-full h-auto">
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-4">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Human ratings</div>
+			<div class="text-gray-400 text-sm leading-relaxed text-center space-y-3">
+				<div><span class="font-semibold text-gray-200">Fidelity</span>: Veo 3 ≈ 100%, Veo 2 ≈ 20%.</div>
+				<div><span class="font-semibold text-gray-200">Precision</span>: Veo 3 ≈ 60%, Veo 2 ≈ 10%.</div>
+				<div class="text-xs text-gray-500">3 raters; first of 2 samples per image.</div>
+			</div>
+			<div class="text-gray-400 text-sm leading-relaxed text-center space-y-2">
+				<div>Bias: animated scenes / unintended camera movement.</div>
+				<div>Potential: controlled prompts → strong 3D-aware editing.</div>
+			</div>
+		</div>
+	</div>
+</section>

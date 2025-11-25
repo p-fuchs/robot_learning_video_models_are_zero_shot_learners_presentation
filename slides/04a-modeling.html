@@ -1,0 +1,37 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<h4 class="text-lg font-bold">⏱️ Duration: 5 mins</h4>
+		<ul>
+			<li><strong>Why this matters for Robotics:</strong> Perception is not enough. A robot needs dynamics (glass vs feather).</li>
+			<li><strong>The Experiment:</strong> Intuitive Physics tests on Veo 3.</li>
+			<li><strong>Examples:</strong> Gravity (Earth vs Moon), rigid vs soft (silk over vase), buoyancy (stone sinks, cap floats).</li>
+			<li><strong>Significance:</strong> Model learns an internal physics prior—behaves like a world model to minimize loss.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Modeling</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Intuitive Physics & World Models</h3>
+	</div>
+
+	<div class="grid grid-cols-2 gap-6 mt-4">
+		<div class="bg-black/40 rounded-xl p-4 border border-gray-700">
+			<div class="text-sky-300 font-bold mb-2">Material Dynamics</div>
+			<div class="text-gray-300 text-sm mb-4">
+				Veo 3 distinguishes between <span class="text-white font-semibold">Rigid Bodies</span> (clanking metal) and <span class="text-white font-semibold">Soft Bodies</span> (silk draping over an object).
+			</div>
+			<div class="flex justify-center">
+				<img src="figure_22.png" alt="Paper Figure 22: rigid vs soft body transform" class="w-full rounded-lg border border-gray-700">
+			</div>
+		</div>
+		<div class="bg-black/40 rounded-xl p-4 border border-gray-700">
+			<div class="text-sky-300 font-bold mb-2">Buoyancy</div>
+			<div class="text-gray-300 text-sm mb-4">
+				Correctly predicts that a <span class="text-white font-semibold">stone sinks</span> but a <span class="text-white font-semibold">plastic cap floats</span> in a bowl of water.
+			</div>
+			<div class="flex justify-center">
+				<img src="figure_24.png" alt="Paper Figure 24: buoyancy simulation" class="w-full rounded-lg border border-gray-700">
+			</div>
+		</div>
+	</div>
+</section>

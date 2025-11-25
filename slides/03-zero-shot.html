@@ -1,0 +1,59 @@
+<section class="flex flex-col gap-10">
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">LLM-focused</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Zero-shot learning</h3>
+	</div>
+
+	<div class="text-gray-300 text-sm leading-relaxed text-center w-11/12 mx-auto">
+		Zero-shot learning (or zero-shot prompting) refers to the amount of information you give to the model before enabling it to perform a task.
+		We don't provide model an example or a list of steps to follow, we just ask the model to solve some issue. This is different from the one-shot (or few-shot)
+		prompting in which we provide many examples for the model to be based on.
+	</div>
+
+	<div class="mt-5 max-w-5xl mx-auto w-full overflow-hidden rounded-2xl border border-gray-700 bg-black/40 backdrop-blur">
+		<table class="w-full text-sm table-fixed border-collapse">
+			<thead class="bg-gray-800/60 text-gray-200">
+				<tr>
+					<th class="px-4 py-3 font-semibold w-1/4 text-center">Prompting type</th>
+					<th class="px-4 py-3 font-semibold">Example</th>
+				</tr>
+			</thead>
+			<tbody class="text-gray-300 divide-y divide-gray-700">
+				<tr class="fragment">
+					<td class="px-4 py-4 align-top font-semibold text-sky-100 text-center text-xl">zero-shot</td>
+					<td class="px-4 py-4">
+						<div class="text-xs leading-relaxed">
+							Classify the news-article into three categories: [Technology, Sport, Literature].
+						</div>
+						<div class="text-xs leading-relaxed">
+							Article to classify: &lt;content&gt;
+						</div>
+					</td>
+				</tr>
+				<tr class="fragment">
+					<td class="px-4 py-4 align-top font-semibold text-amber-100 text-center text-xl">one-shot</td>
+					<td class="px-4 py-4">
+						<div class="text-xs leading-relaxed space-y-1">
+							<div>Classify the news-article into three categories: [Technology, Sport, Literature].</div>
+							<div>Example: <br/> Article [Classification: Technology]: &lt;content&gt;</div>
+							<div>Article to classify: &lt;content&gt;</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="fragment">
+					<td class="px-4 py-4 align-top font-semibold text-emerald-100 text-center text-xl">few-shot</td>
+					<td class="px-4 py-4">
+						<div class="text-xs leading-relaxed space-y-1">
+							<div>Classify the news-article into three categories: [Technology, Sport, Literature].</div>
+							<div>Examples:</div>
+							<div>Article [Classification: Technology]: &lt;content&gt;</div>
+							<div>Article [Classification: Sport]: &lt;content&gt;</div>
+							<div>Article [Classification: Literature]: &lt;content&gt;</div>
+							<div>Article to classify: &lt;content&gt;</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>

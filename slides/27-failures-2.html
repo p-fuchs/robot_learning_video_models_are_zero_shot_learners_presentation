@@ -1,0 +1,29 @@
+<section class="flex flex-col gap-8">
+	<aside class="notes">
+		<ul>
+			<li>Eulerian path: adds non-existent edges.</li>
+			<li>Laundry folding: physics violation; implausible arm motion.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Failure cases</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">When it breaks (2/2)</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+		<div class="bg-black/40 backdrop-blur rounded-2xl p-4 border border-gray-700 flex flex-col gap-3">
+			<div class="text-gray-200 font-semibold">Eulerian path</div>
+			<div class="text-gray-400 text-xs leading-relaxed">Prompt: “Create a smooth animation where a red pen traces all existing edges in a continuous path without lifting the pen. All edges need to be traced. Do not visit any edge twice and do not lift the pen. No zoom, no pan."</div>
+			<video class="w-full rounded-xl border border-gray-700" src="https://video-zero-shot.github.io/mp4/Eulerian-path_failure_case.mp4" controls muted></video>
+			<div class="text-gray-400 text-xs">Failure: does not trace exact edges; draws non-existent ones.</div>
+		</div>
+
+		<div class="bg-black/40 backdrop-blur rounded-2xl p-4 border border-gray-700 flex flex-col gap-3">
+			<div class="text-gray-200 font-semibold">Laundry folding</div>
+			<div class="text-gray-400 text-xs leading-relaxed">Prompt: “Generate a video of two metal robotic arms properly folding the t-shirt on the table.”</div>
+			<video class="w-full rounded-xl border border-gray-700" src="https://video-zero-shot.github.io/mp4/laundry-folding_failure_case.mp4" controls muted></video>
+			<div class="text-gray-400 text-xs">Failure: implausible folding; physics violation.</div>
+		</div>
+	</div>
+</section>

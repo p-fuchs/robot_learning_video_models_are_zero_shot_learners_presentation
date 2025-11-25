@@ -1,0 +1,37 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<h4 class="text-lg font-bold">⏱️ Duration: 4 mins</h4>
+		<ul>
+			<li><strong>The Core Mechanism:</strong> Video model “reasons” by simulating frames.</li>
+			<li><strong>Chain of Thought (CoT):</strong> In LLMs, intermediate tokens expose reasoning.</li>
+			<li><strong>Chain of Frames (CoF):</strong> Frame-by-frame generation is spatial/temporal planning.</li>
+			<li><strong>Time as Reasoning:</strong> Frame t conditions frame t+1.</li>
+			<li><strong>Evidence:</strong> Better when generating the solution video vs. only final answer.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Theoretical Contribution</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Chain-of-Frames (CoF)</h3>
+	</div>
+
+	<div class="flex flex-col items-center gap-8 mt-6">
+		<div class="flex items-center gap-6 text-2xl text-gray-300">
+			<div class="p-6 bg-blue-900/30 border border-blue-500/50 rounded-xl text-center w-64">
+				<div class="font-bold text-blue-300 mb-2">LLM</div>
+				<div class="text-sm">Chain of Thought</div>
+				<div class="text-xs text-gray-400 mt-2">Intermediate Tokens = Reasoning steps</div>
+			</div>
+			<div class="text-4xl text-gray-600">≈</div>
+			<div class="p-6 bg-red-900/30 border border-red-500/50 rounded-xl text-center w-64">
+				<div class="font-bold text-red-300 mb-2">Video Model</div>
+				<div class="text-sm">Chain of Frames</div>
+				<div class="text-xs text-gray-400 mt-2">Intermediate Frames = Spatial planning</div>
+			</div>
+		</div>
+
+		<div class="w-3/4 text-center text-gray-400 text-lg leading-relaxed bg-black/40 p-6 rounded-2xl border border-gray-700">
+			"Just as chain-of-thought enables language models to reason with symbols, a <span class="text-gray-100 font-bold">chain-of-frames</span> enables video models to reason across time and space."
+		</div>
+	</div>
+</section>

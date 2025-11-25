@@ -1,0 +1,34 @@
+<section class="flex flex-col gap-8">
+	<aside class="notes">
+		<ul>
+			<li>Veo 3 zero-shot solves; big gap vs Veo 2 (e.g., 5x5: 78% vs 14% pass@10).</li>
+			<li>Nano Banana strong on rectangular mazes; fails on irregular.</li>
+			<li>Gemini 2.5 Pro better on small text mazes (T2T), struggles on images and 9x9.</li>
+			<li>Step-by-step visual planning beats text-only on larger/irregular layouts.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Reasoning results</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Maze solving performance</h3>
+	</div>
+
+	<div class="bg-gradient-to-br from-slate-900/60 via-slate-900/70 to-black/80 backdrop-blur rounded-2xl p-4 border border-gray-800 flex justify-center">
+		<img src="maze_solving.png" alt="Maze solving results across grid sizes and irregular mazes" class="w-full h-80 object-contain rounded-xl border border-gray-800">
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400 mt-5">
+		<div class="bg-black/40 rounded-xl p-4 border border-gray-800">
+			<div class="text-gray-200 font-semibold mb-2">5×5 / 7×7 grids</div>
+			<div>Veo 3 climbs with attempts; Veo 2 mostly illegal moves early.</div>
+		</div>
+		<div class="bg-black/40 rounded-xl p-4 border border-gray-800">
+			<div class="text-gray-200 font-semibold mb-2">9×9 grids</div>
+			<div>Veo 3 ahead of Gemini I2T/T2T; text models lag on image inputs.</div>
+		</div>
+		<div class="bg-black/40 rounded-xl p-4 border border-gray-800">
+			<div class="text-gray-200 font-semibold mb-2">Irregular mazes</div>
+			<div>Veo 3 generalizes; Nano Banana fails; visual step-by-step shines.</div>
+		</div>
+	</div>
+</section>

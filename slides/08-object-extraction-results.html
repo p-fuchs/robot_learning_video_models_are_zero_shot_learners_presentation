@@ -1,0 +1,41 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Pass@10 mIoU-style check: count components in last frame.</li>
+			<li>Veo 3 reaches 93% pass@10; Veo 2 ~ chance.</li>
+			<li>Chance baseline: random-chance = 1 - (1 - p)^k with p=1/9, k in [1,10].</li>
+			<li>Simple task; perfect model should hit 100%.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Manipulation results</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Object extraction performance</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="bg-gradient-to-br from-emerald-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Veo 3</div>
+			<div class="text-gray-400 text-sm leading-relaxed text-center space-y-1">
+				<div class="text-3xl font-bold text-emerald-300">93%</div>
+				<div>pass@10 (last-frame component count)</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-sky-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Veo 2</div>
+			<div class="text-gray-400 text-sm leading-relaxed text-center space-y-1">
+				<div class="text-2xl font-bold text-amber-300">Around chance</div>
+				<div>Struggles to extract correct counts.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Baseline</div>
+			<div class="text-gray-400 text-sm leading-relaxed text-center space-y-1">
+				<div>Chance: 1 - (1 - 1/9)^k, k in [1,10]</div>
+				<div>Simple task ⇒ ceiling should be 100%.</div>
+			</div>
+		</div>
+	</div>
+</section>

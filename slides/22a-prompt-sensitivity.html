@@ -1,0 +1,61 @@
+<section class="flex flex-col gap-8">
+	<aside class="notes">
+		<h4 class="text-lg font-bold">⏱️ Duration: 3 mins</h4>
+		<ul>
+			<li><strong>Hypersensitive to prompts:</strong> like early LLMs.</li>
+			<li>Symmetry task: prompt swings pass@1 from ~68% to ~12%.</li>
+			<li>Best practices: give motion outlet; specify what not to change.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Appendix C</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Prompt Sensitivity</h3>
+	</div>
+
+	<div class="mt-4 overflow-hidden rounded-2xl border border-gray-700 bg-black/40 backdrop-blur">
+		<table class="w-full text-sm">
+			<thead class="bg-gray-800/60 text-gray-200">
+				<tr>
+					<th class="px-6 py-4 text-left">Prompt Strategy</th>
+					<th class="px-6 py-4 text-center text-emerald-300">Pass@1 (Shape)</th>
+					<th class="px-6 py-4 text-left text-gray-400">Insight</th>
+				</tr>
+			</thead>
+			<tbody class="divide-y divide-gray-800 text-gray-300">
+				<tr>
+					<td class="px-6 py-4 font-mono text-xs text-sky-200">
+						"Instantly reflect this pattern along the central, vertical axis..."
+					</td>
+					<td class="px-6 py-4 text-center font-bold text-xl">68%</td>
+					<td class="px-6 py-4 text-xs">Direct, geometric instruction.</td>
+				</tr>
+				<tr>
+					<td class="px-6 py-4 font-mono text-xs text-gray-400">
+						"Reflect this pattern along the central, vertical axis."
+					</td>
+					<td class="px-6 py-4 text-center font-bold text-lg opacity-80">40%</td>
+					<td class="px-6 py-4 text-xs">Too ambiguous.</td>
+				</tr>
+				<tr>
+					<td class="px-6 py-4 font-mono text-xs text-red-200">
+						"You're a master symmetry solver. Your task is to..."
+					</td>
+					<td class="px-6 py-4 text-center font-bold text-lg opacity-50">12%</td>
+					<td class="px-6 py-4 text-xs">Role-playing distracts the video prior.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+		<div class="p-4 rounded-xl border border-emerald-500/30 bg-emerald-900/10 text-center">
+			<div class="text-emerald-300 font-bold mb-1">Tip: The "Motion Outlet"</div>
+			<div class="text-xs text-gray-400">Explicitly ask for a static camera or add a tiny moving element to stabilize the scene.</div>
+		</div>
+		<div class="p-4 rounded-xl border border-sky-500/30 bg-sky-900/10 text-center">
+			<div class="text-sky-300 font-bold mb-1">Tip: Negative Constraints</div>
+			<div class="text-xs text-gray-400">State "Do not change anything else" for in-painting or simple reasoning.</div>
+		</div>
+	</div>
+</section>

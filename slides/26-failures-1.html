@@ -1,0 +1,36 @@
+<section class="flex flex-col gap-8">
+	<aside class="notes">
+		<ul>
+			<li>Failures: text hallucination (linear equations), physics violation (glass), bottleneck impossible.</li>
+			<li>Prompts included; highlight limits of current model.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Failure cases</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">When it breaks (1/2)</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+		<div class="bg-black/40 backdrop-blur rounded-2xl p-4 border border-gray-700 flex flex-col gap-3">
+			<div class="text-gray-200 font-semibold">Linear equations</div>
+			<div class="text-gray-400 text-xs leading-relaxed">Prompt: “A hand appears and solves the set of linear equations. It replaces the x, y, z matrix with their correct values that solves the equation. Do not change anything else."</div>
+			<video class="w-full rounded-xl border border-gray-700" src="https://video-zero-shot.github.io/mp4/linear-equations_failure_case.mp4" controls muted></video>
+			<div class="text-gray-400 text-xs">Failure: hallucinated text on board.</div>
+		</div>
+
+		<div class="bg-black/40 backdrop-blur rounded-2xl p-4 border border-gray-700 flex flex-col gap-3">
+			<div class="text-gray-200 font-semibold">Glass falling</div>
+			<div class="text-gray-400 text-xs leading-relaxed">Prompt: “The object falls. Static camera, no pan, no zoom, no dolly.”</div>
+			<video class="w-full rounded-xl border border-gray-700" src="https://video-zero-shot.github.io/mp4/glass_falling_failure_case.mp4" controls muted></video>
+			<div class="text-gray-400 text-xs">Failure: physics violation; glass reorients, does not break.</div>
+		</div>
+
+		<div class="bg-black/40 backdrop-blur rounded-2xl p-4 border border-gray-700 flex flex-col gap-3">
+			<div class="text-gray-200 font-semibold">Bottleneck</div>
+			<div class="text-gray-400 text-xs leading-relaxed">Prompt: “A person tries to put the golf ball in the vase. Static camera, no pan, no zoom, no dolly.”</div>
+			<video class="w-full rounded-xl border border-gray-700" src="https://video-zero-shot.github.io/mp4/bottleneck_failure_case.mp4" controls muted></video>
+			<div class="text-gray-400 text-xs">Failure: implausible; ball too large for vase neck.</div>
+		</div>
+	</div>
+</section>

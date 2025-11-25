@@ -1,0 +1,34 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<h4 class="text-lg font-bold">⏱️ Duration: 3 mins</h4>
+		<ul>
+			<li><strong>Sim2Real Gap:</strong> Veo 3 is a “World Simulator,” but physics fidelity varies (e.g., glass fails to break).</li>
+			<li><strong>Performance vs Competence:</strong> Metrics are a lower bound; prompting/representation limits observed scores.</li>
+			<li><strong>Future of Robot Learning:</strong> Could Veo 4/5 “dream” training data instead of costly real-world collection?</li>
+			<li><strong>Reference:</strong> Mention V-JEPA / Sora as parallel world-model efforts.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Discussion</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Performance is a lower bound</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Prompt & representation</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Maze can be grid, game, or photoreal scene; output as line, object, path.</div>
+				<div>Visual + text prompt design is critical; reported scores are lower bounds.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-amber-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Competence vs performance</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>True ability may exceed observed metric; failures partly prompt-bound.</div>
+				<div>Known misses: folding laundry, sofa planning, certain visual puzzles.</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,41 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Visual analogy: fill missing quadrant (A:B :: C: ?).</li>
+			<li>KiVA benchmark: color, resize, reflect, rotate transforms.</li>
+			<li>Veo 3 good on color/resize; below chance on reflect/rotate; Veo 2 struggles overall.</li>
+			<li>Autorated pass@1 via Gemini 2.5 Pro; k=1.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Reasoning</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Visual analogy completion</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="bg-gradient-to-br from-sky-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Task</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Complete missing quadrant of 2×2 grid using learned transform.</div>
+				<div>Prompt: generate missing object; originals stay still; static camera.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-emerald-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Data & eval</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>KiVA test trials; four transforms (color, resize, reflect, rotate).</div>
+				<div>Crop generated object; Gemini 2.5 Pro autorater picks closest choice; pass@1.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Results</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Veo 3 succeeds on color/resize; both models below chance on reflect/rotate.</div>
+				<div>Hints systematic bias; emergent but imperfect reasoning.</div>
+			</div>
+		</div>
+	</div>
+</section>

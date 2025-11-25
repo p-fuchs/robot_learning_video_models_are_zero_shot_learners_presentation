@@ -1,0 +1,41 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li>Complete symmetry: mirror left pattern to right on 10×16 grid.</li>
+			<li>Dataset: 25 shapes/letters, 25 random patterns.</li>
+			<li>Veo 3 > Veo 2 and Nano Banana; prompt choice shifts pass@1 by 40–64 pp.</li>
+			<li>Eval: zero incorrect cells (CIELAB ΔE &lt; 15) on best/last frame, k=1.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Reasoning</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Visual symmetry solving</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="bg-gradient-to-br from-sky-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Task</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Mirror a colored pattern on left half to the right half; static camera.</div>
+				<div>Prompt: “Instantly reflect… along the central, vertical axis; no zoom/pan.”</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-emerald-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Data & models</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>50 samples: 25 shapes/letters, 25 random grids.</div>
+				<div>Veo 3 / Veo 2 (Vertex); Nano Banana image model.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold">Results</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2">
+				<div>Pass@1: Veo 3 leads; Veo 2 and Nano Banana much lower.</div>
+				<div>Prompt sensitivity: best vs worst prompt differs by 40 pp (shapes) / 64 pp (random).</div>
+			</div>
+		</div>
+	</div>
+</section>

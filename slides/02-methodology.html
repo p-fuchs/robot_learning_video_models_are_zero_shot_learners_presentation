@@ -1,0 +1,36 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		Prompting VEO - mimics transformation of NLP from models to LLM prompting.
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Veo</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Research methodology</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+		<div class="bg-gradient-to-br from-sky-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Model architecture</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-2 text-center">
+				<div>Querying <span class="text-sky-300 font-semibold">Veo 2</span> &amp; <span class="text-sky-300 font-semibold">Veo 3</span> models via Google Vertex API.</div>
+				<div>Outputs <span class="text-sky-300 font-semibold">8-second</span> video clips.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-purple-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3 shadow-[0_0_30px_-16px_rgba(167,139,250,0.45)]">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Prompt refiner</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-3 text-center">
+				<div>Veo model has a <span class="text-purple-300 font-semibold">LLM prompt refiner</span> that firstly enhances the prompt before invoking video generation.</div>
+				<div><span class="text-purple-300 font-semibold">Visual-Hardness Check:</span> validated via Gemini 2.5 Pro.</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-emerald-900/50 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-3">
+			<div class="text-gray-200 text-2xl font-semibold text-center">Why Veo?</div>
+			<div class="text-gray-400 text-sm leading-relaxed space-y-3 text-center">
+				<div>Consistently strong on Text2Video &amp; Image2Video leaderboards.</div>
+				<div>Ability to compare results with the model's predecessor (<span class="text-emerald-300 font-semibold">Veo 2</span>) and successor (<span class="text-emerald-300 font-semibold">Veo 3</span>).</div>
+			</div>
+		</div>
+	</div>
+</section>

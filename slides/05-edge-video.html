@@ -1,0 +1,44 @@
+<section class="flex flex-col items-center gap-6">
+	<div class="text-center space-y-2">
+		<h3 class="!text-5xl !leading-tight font-semibold">Edge detection</h3>
+	</div>
+
+	<div class="w-full mt-7 flex items-center justify-center relative">
+		<video id="edge-demo" class="w-full rounded-2xl border border-gray-700 shadow-lg" src="https://video-zero-shot.github.io/mp4/edge_detection.mp4" muted controls onloadedmetadata="this.playbackRate=1.75" controlslist="play"></video>
+		<div class="fragment fade-up absolute top-1 right-7 bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-black/90 backdrop-blur border border-gray-700 rounded-2xl px-5 py-4 text-gray-200 text-sm shadow-xl pointer-events-none" data-fragment-index="1">
+			<div class="text-[11px] uppercase tracking-[0.16em] text-gray-400 pb-3">Metrics</div>
+			<div class="space-y-3">
+				<div class="flex items-start justify-start gap-4 items-center">
+					<div class="flex items-center gap-2 h-full">
+						<span class="px-3 py-1 rounded-full bg-sky-900/60 text-sky-100 text-xs font-semibold border border-sky-700">Veo 3</span>
+					</div>
+					<div class="flex items-start gap-4">
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">pass@10</div>
+							<div class="text-base font-semibold text-emerald-300">77%</div>
+						</div>
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">recall@69</div>
+							<div class="text-base font-semibold text-amber-300">2%</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex items-start justify-between gap-4 pt-2 border-t border-gray-800 items-center">
+					<div class="flex items-center gap-2">
+						<span class="px-3 py-1 rounded-full bg-sky-900/30 text-sky-100 text-xs font-semibold border border-sky-700/50">Veo 2</span>
+					</div>
+					<div class="flex items-start gap-4">
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">pass@10</div>
+							<div class="text-base font-semibold text-emerald-300">55%</div>
+						</div>
+						<div class="text-right">
+							<div class="text-[11px] uppercase tracking-[0.12em] text-gray-400">recall@69</div>
+							<div class="text-base font-semibold text-amber-300">5%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

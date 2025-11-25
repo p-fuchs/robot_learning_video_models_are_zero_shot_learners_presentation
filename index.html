@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Robot Learning Seminar presentation</title>
+		<link rel="icon" type="image/png" href="favicon.png">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -12,12 +13,44 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-external="slides/00-cover.html"></section>
+				<section data-external="slides/01-paradigm.html"></section>
+				<section data-external="slides/02-methodology.html"></section>
+				<section data-external="slides/03-zero-shot.html"></section>
+				<section data-external="slides/04-hierarchy.html"></section>
+				<section data-external="slides/04a-modeling.html"></section>
+				<section data-external="slides/05-edge-video.html"></section>
+				<section data-external="slides/06-segmentation-video.html"></section>
+				<section data-external="slides/07-object-extraction.html"></section>
+				<section data-external="slides/08-object-extraction-results.html"></section>
+				<section data-external="slides/09-image-editing.html"></section>
+				<section data-external="slides/10-maze-intro.html"></section>
+				<section data-external="slides/11-maze-results.html"></section>
+				<section data-external="slides/12-maze-video-9x9.html"></section>
+				<section data-external="slides/13-maze-video-irregular.html"></section>
+				<section data-external="slides/14-maze-video-mouse.html"></section>
+				<section data-external="slides/14a-chain-of-frames.html"></section>
+				<section data-external="slides/15-symmetry-intro.html"></section>
+				<section data-external="slides/16-symmetry-video-shape.html"></section>
+				<section data-external="slides/17-symmetry-video-random.html"></section>
+				<section data-external="slides/18-analogy-intro.html"></section>
+				<section data-external="slides/19-analogy-video-colour.html"></section>
+				<section data-external="slides/20-analogy-video-resize.html"></section>
+				<section data-external="slides/21-analogy-video-reflect.html"></section>
+				<section data-external="slides/22-analogy-video-rotate.html"></section>
+				<section data-external="slides/22a-prompt-sensitivity.html"></section>
+				<section data-external="slides/23-discussion-summary.html"></section>
+				<section data-external="slides/24-discussion-performance.html"></section>
+				<section data-external="slides/25-discussion-economics.html"></section>
+				<section data-external="slides/26-failures-1.html"></section>
+				<section data-external="slides/27-failures-2.html"></section>
+				<section data-external="slides/29-thanks.html"></section>
 			</div>
 		</div>
 
@@ -26,15 +59,33 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
+			// Load slide fragments before initializing Reveal
+			const loadExternalSlides = () => {
+				const sections = Array.from(document.querySelectorAll('[data-external]'));
+				if (!sections.length) return Promise.resolve();
+				return Promise.all(sections.map(async (section) => {
+					const src = section.getAttribute('data-external');
+					const response = await fetch(src);
+					if (!response.ok) throw new Error(`Failed to load ${src}`);
+					section.innerHTML = await response.text();
+				}));
+			};
+
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+			loadExternalSlides()
+				.catch((error) => console.error(error))
+				.finally(() => {
+					Reveal.initialize({
+						progress: false,
+						controls: false,
+						hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
+						// Learn about plugins: https://revealjs.com/plugins/
+						plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+					});
+				});
 		</script>
 	</body>
 </html>
