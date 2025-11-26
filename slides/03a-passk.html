@@ -1,0 +1,79 @@
+<section class="flex flex-col gap-10">
+	<aside class="notes">
+		<ul>
+			<li><strong>Concept:</strong> We are looking at ONE task (e.g., one specific maze).</li>
+			<li><strong>The Setup:</strong> We generated 5 different attempts to solve this one maze.</li>
+			<li><strong>The Result:</strong> Only the 3rd attempt actually solved it.</li>
+			<li><strong>pass@1:</strong> If we randomly pick just one video from the 5, we have a 20% chance of holding the winner.</li>
+			<li><strong>pass@5:</strong> If we get to keep all 5 videos, we are 100% sure we have the winner.</li>
+			<li><strong>Final Metric:</strong> We average these probabilities across all 1,000 mazes in the dataset.</li>
+		</ul>
+	</aside>
+
+	<div class="text-center space-y-2">
+		<div class="text-sm uppercase tracking-[0.3em] text-gray-400">Evaluation Metrics</div>
+		<h3 class="!text-5xl !leading-tight font-semibold">Understanding pass@k</h3>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+		<div class="bg-gradient-to-br from-indigo-900/40 via-slate-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-4">
+			<div class="text-indigo-300 text-2xl font-semibold">The "Creative" Analogy</div>
+			<div class="text-gray-300 text-sm leading-relaxed space-y-4">
+				<p>
+					Video generation is like a <strong>Graphic Designer</strong> presenting logo options to a client.
+				</p>
+				<p>
+					The designer creates a batch of drafts. The client only needs to approve <strong>one</strong>.
+				</p>
+				<div class="p-4 bg-black/40 rounded-xl border border-gray-700/50">
+					<div class="text-xs uppercase tracking-widest text-gray-500 mb-2">Why this metric?</div>
+					<div class="text-gray-400 text-xs">
+						Standard accuracy asks: "Is the average draft good?"<br/>
+						<span class="font-mono text-indigo-200">pass@k</span> asks: "Is the <span class="text-white font-bold">best</span> draft good?"
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-slate-900/60 via-gray-900/60 to-black/80 backdrop-blur rounded-2xl p-6 border border-gray-800 flex flex-col gap-4">
+			<div class="text-emerald-300 text-2xl font-semibold">Single Task Example</div>
+			
+			<div class="text-gray-400 text-xs uppercase tracking-widest text-center">We generate 5 attempts for ONE task</div>
+			<div class="flex justify-center gap-2 mb-2">
+				<div class="w-10 h-10 rounded border border-red-500/50 bg-red-900/20 flex items-center justify-center text-red-400">✗</div>
+				<div class="w-10 h-10 rounded border border-red-500/50 bg-red-900/20 flex items-center justify-center text-red-400">✗</div>
+				<div class="w-10 h-10 rounded border border-emerald-500/50 bg-emerald-900/20 flex items-center justify-center text-emerald-300 font-bold">✓</div>
+				<div class="w-10 h-10 rounded border border-red-500/50 bg-red-900/20 flex items-center justify-center text-red-400">✗</div>
+				<div class="w-10 h-10 rounded border border-red-500/50 bg-red-900/20 flex items-center justify-center text-red-400">✗</div>
+			</div>
+
+			<div class="space-y-4 text-sm divide-y divide-gray-700">
+				<div class="pt-2">
+					<div class="flex justify-between font-mono text-gray-300 mb-1">
+						<span>pass@1</span>
+						<span class="text-emerald-300">0.20 (20%)</span>
+					</div>
+					<div class="text-gray-500 text-xs leading-relaxed">
+						<strong>Question:</strong> If we randomly pick ONE of these 5 videos, what is the chance it solves the task?<br/>
+						<strong>Math:</strong> 1 success / 5 total = 20%
+					</div>
+				</div>
+				
+				<div class="pt-2">
+					<div class="flex justify-between font-mono text-gray-300 mb-1">
+						<span>pass@5</span>
+						<span class="text-emerald-300">1.00 (100%)</span>
+					</div>
+					<div class="text-gray-500 text-xs leading-relaxed">
+						<strong>Question:</strong> If we verify ALL 5 videos, do we find a solution?<br/>
+						<strong>Math:</strong> Yes, the 3rd one works.
+					</div>
+				</div>
+
+				<div class="pt-2 text-center">
+					<span class="text-[10px] text-gray-500 uppercase tracking-widest">Final Step: Average these scores across all tasks.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

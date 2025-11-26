@@ -23,6 +23,7 @@
 				<section data-external="slides/01-paradigm.html"></section>
 				<section data-external="slides/02-methodology.html"></section>
 				<section data-external="slides/03-zero-shot.html"></section>
+				<section data-external="slides/03a-passk.html"></section>
 				<section data-external="slides/04-hierarchy.html"></section>
 				<section data-external="slides/04a-modeling.html"></section>
 				<section data-external="slides/05-edge-video.html"></section>
@@ -58,6 +59,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// Load slide fragments before initializing Reveal
 			const loadExternalSlides = () => {
@@ -83,7 +85,7 @@
 						hash: true,
 
 						// Learn about plugins: https://revealjs.com/plugins/
-						plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+						plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 					});
 				});
 		</script>
